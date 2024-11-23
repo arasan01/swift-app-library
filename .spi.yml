@@ -1,0 +1,14 @@
+version: 1
+builder:
+  configs:
+  - platform: ios
+    scheme: AppLibrary
+  - platform: macos-xcodebuild
+    scheme: AppLibrary
+  - platform: tvos
+    scheme: AppLibrary
+  - platform: watchos
+    scheme: AppLibrary
+  - documentation_targets:
+    - AppLibrary
+    swift_version: 6.0
