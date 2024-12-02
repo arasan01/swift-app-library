@@ -20,8 +20,10 @@ public struct NSWindowMonitorViewModifier: ViewModifier {
         content
         .background {
             NSWindowMonitorView.Representable { nsWindow in
+              if self.nsWindow != nsWindow {
                 self.nsWindow = nsWindow
                 handler?(nsWindow)
+              }
             }
         }
         .environment(\.window, nsWindow)
